@@ -133,6 +133,12 @@ button {
     display: none;
   }
 
+  .header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
   .nav-list {
     display: flex;
     align-items: center;
@@ -179,6 +185,7 @@ button {
     border-radius: 2px;
     background-color: #404bbf;
   }
+
   .contacts-list {
     display: flex;
     flex-direction: column;
@@ -212,7 +219,11 @@ button {
 
   .contacts-list {
     flex-direction: row;
-    align-items: center;
+    gap: 40px;
+  }
+
+  .contacts {
+    margin-left: auto;
   }
 
   .contacts-link {
@@ -300,7 +311,7 @@ button {
 
 /* Navigation */
 .mobile-nav {
-  margin-bottom: 168px;
+  margin-bottom: auto;
 }
 
 .mobile-nav-list {
@@ -336,7 +347,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-bottom: 48px;
 }
 
 .mobile-contacts-link {
@@ -392,13 +402,11 @@ button {
 }
 
 /* ...................HERO Mobile version................. */
-
 .hero-title {
-  padding: 72px 52px;
+  padding: 72px 0;
   margin: 0 auto;
   max-width: 320px;
   max-height: 432px;
-  text-align: center;
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -421,7 +429,6 @@ button {
 }
 
 .main-title {
-  margin: 0 auto;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
@@ -469,7 +476,6 @@ button {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero/hero-tab-min.jpg);
-    max-width: 768px;
     max-height: 436px;
   }
 
@@ -631,6 +637,11 @@ button {
     line-height: 1.2;
   }
 
+  .section-content {
+    font-weight: 400;
+    letter-spacing: 0.0195em;
+  }
+
   .features-item-effect {
     display: flex;
     justify-content: center;
@@ -646,7 +657,7 @@ button {
 
 /* ...................OUR TEAM Mobile version................. */
 .section-team {
-  padding: 96px 28px;
+  padding: 96px 0;
   background-color: #f4f4fd;
 }
 
@@ -665,18 +676,8 @@ button {
   flex-wrap: wrap;
   align-items: center;
   gap: 72px;
-}
-
-.team-item {
-  width: 100%;
-  background-color: #ffffff;
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-}
-
-.photo-teams {
-  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .team-info {
@@ -701,10 +702,21 @@ button {
   margin-bottom: 8px;
 }
 
+.team-item {
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.photo-teams {
+  width: 100%;
+  height: auto;
+}
+
 .team-socmedia-list {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 24px;
 }
 
@@ -714,9 +726,7 @@ button {
   align-items: center;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   fill: #f4f4fd;
-  background-color: #4d5ae5;
 }
 
 .team-socmedia-link {
@@ -737,33 +747,43 @@ button {
 
 /* ...................OUR TEAM Tablet version................. */
 @media screen and (min-width: 768px) {
-  .section-team {
-    padding: 96px 108px;
+  .container {
+    max-width: 768px;
   }
 
   .list-team {
-    gap: 64px 24px;
-  }
-
-  .team-item {
-    flex-basis: calc((100% - 24px) / 2);
+    display: flex;
+    gap: 24px;
+    row-gap: 64px;
+    justify-content: center;
+    padding-left: 92px;
+    padding-right: 92px;
   }
 }
 
 /* ...................OUR TEAM Desktop version................. */
 @media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .section-team {
     padding: 120px 0;
   }
 
-  .team-item {
-    flex-basis: calc((100% - 3 * 24px) / 4);
+  .list-team {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    padding: 0;
   }
 }
 
 /* ...................PORTFOLIO Mobile version................. */
-.container.poftfolio-box {
-  padding: 96px 16px;
+.section-portfolio {
+  padding: 96px 0px;
   background-color: #fff;
 }
 
@@ -781,10 +801,6 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 48px;
-}
-
-.portfolio-item {
-  width: 100%;
 }
 
 .portfolio-item {
@@ -824,6 +840,10 @@ button {
 }
 /* ...................PORTFOLIO Tablet version................. */
 @media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
   .portfolio-list {
     gap: 72px 24px;
   }
@@ -835,12 +855,18 @@ button {
 
 /* ...................PORTFOLIO Desktop version................. */
 @media screen and (min-width: 1158px) {
-  .poftfolio-box {
-    padding: 120px 120px;
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .section-portfolio {
+    padding: 120px 0px;
   }
 
   .portfolio-list {
-    gap: 40px 24px;
+    row-gap: 48px;
   }
 
   .portfolio-info {
@@ -976,6 +1002,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  gap: 16px;
   text-align: center;
 }
 
@@ -985,8 +1012,15 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  margin-bottom: 16px;
   text-align: center;
+}
+
+.email-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
 .footer-input {
@@ -999,13 +1033,12 @@ button {
   line-height: 2;
   letter-spacing: 0.04em;
   padding-left: 16px;
-  margin-right: 24px;
+  /* margin-right: 24px; */
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
   outline: transparent;
   color: #fff;
   margin: 0 auto;
-  margin-bottom: 16px;
 }
 
 .footer-input::placeholder {
@@ -1050,16 +1083,18 @@ button {
 
 /* ...................FOOTER Tablet version................. */
 @media screen and (min-width: 768px) {
+  .footer-page {
+    padding: 92px 0;
+  }
+
+  .container.footer-container {
+    padding: 0 108px;
+  }
+
   .footer-container {
     flex-direction: row;
     row-gap: 72px;
     column-gap: 24px;
-  }
-
-  .footer-page {
-    padding: 96px 92px;
-    min-height: 312px;
-    height: 100%;
   }
 
   .footer-info {
@@ -1087,18 +1122,17 @@ button {
 
 /* ...................FOOTER Desktop version................. */
 @media screen and (min-width: 1158px) {
+  .footer-page {
+    padding: 100px 0;
+  }
+
   .container.footer-container {
+    padding: 0 16px;
     display: flex;
     flex-direction: row;
     align-content: center;
     align-items: baseline;
     gap: 0;
-  }
-
-  .footer-page {
-    padding: 100px 0;
-    min-height: 312px;
-    height: 100%;
   }
 
   .footer-info {
@@ -1200,11 +1234,6 @@ button {
 .modal-close {
   display: flex;
   justify-content: center;
-  align-items: center;
-  top: 24px;
-  right: 24px;
-  gap: 24px;
-  cursor: pointer;
   padding: 0;
   position: absolute;
   background-color: #e7e9fc;
